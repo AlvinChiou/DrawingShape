@@ -9,5 +9,10 @@
             android:layout_height="wrap_content"
             android:text="@string/prompt"
             />
+    <org.draw2D.GeometricView
+            android:id="@+id/geomView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
 </LinearLayout>
 
