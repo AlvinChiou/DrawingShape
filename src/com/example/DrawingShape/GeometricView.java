@@ -7,7 +7,18 @@ import android.graphics.drawable.shapes.OvalShape;
 import android.graphics.drawable.shapes.RectShape;
 import android.util.AttributeSet;
 import android.view.View;
-
+class GetItem{
+    public int getItem;
+    public GetItem(int getItem) {
+        this.getItem = getItem;
+    }
+}
+//class SetItem{
+//    public int setItem;
+//    public SetItem(int setItem) {
+//        this.setItem = setItem;
+//    }
+//}
 public class GeometricView extends View{
     private ShapeDrawable shapesRect;
     private ShapeDrawable shapesCirc;

@@ -27,7 +27,8 @@ public class MainActivity extends Activity {
         String msg = "";
         switch (item.getItemId()){
             case R.id.shape:
-                msg = getString(R.string.shape);
+                //msg = getString(R.string.shape);
+                GetItem gi = new GetItem(R.id.shape);
                 break;
             case R.id.circle:
                 msg = getString(R.string.circle);
