@@ -27,13 +27,15 @@ public class MainActivity extends Activity {
         //String msg = "";
         switch (item.getItemId()){
             case R.id.shape:
-                gv.setShape(0);
+                gv.setShape(R.id.shape);
                 break;
             case R.id.circle:
-                gv.setShape(R.id.circle);
+                gv.setShape(0);
+                gv.invalidate();
                 break;
             case R.id.rectangle:
-                gv.setShape(R.id.rectangle);
+                gv.setShape(1);
+                gv.invalidate();
                 break;
 
             case R.id.color:
