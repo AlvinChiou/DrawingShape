@@ -5,18 +5,18 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 public class MainActivity extends Activity {
-    public GeometricView gv;
+    public GeometricView geomView;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         findViews();
     }
-    public void findViews(){
-        gv=(GeometricView)findViewById(R.id.geomView);
+
+    public void findViews() {
+        geomView = (GeometricView) findViewById(R.id.geomView);
     }
 
     @Override
@@ -28,35 +28,33 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        //String msg = "";
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.shape:
-                gv.setShape(R.id.shape);
+                geomView.setShape(R.id.shape);
                 break;
             case R.id.circle:
-                gv.setShape(0);
-                gv.invalidate();
+                geomView.setShape(0);
+                geomView.invalidate();
                 break;
             case R.id.rectangle:
-                gv.setShape(1);
-                gv.invalidate();
+                geomView.setShape(1);
+                geomView.invalidate();
                 break;
 
             case R.id.color:
-                gv.setColor(R.id.color);
+                geomView.setColor(R.id.color);
                 break;
             case R.id.blue:
-                gv.setColor(R.id.blue);
+                geomView.setColor(R.id.blue);
                 break;
             case R.id.red:
-                gv.setColor(R.id.red);
+                geomView.setColor(R.id.red);
                 break;
             case R.id.exit:
                 this.finish();
             default:
                 return super.onOptionsItemSelected(item);
         }
-        //Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
         return true;
     }
 

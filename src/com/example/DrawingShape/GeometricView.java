@@ -32,12 +32,15 @@ public class GeometricView extends View {
     }
 
     public void makeShapes() {
+
         if (shape == 0) {
             shapes = new ShapeDrawable(new OvalShape());
             shapes.setBounds(10, 10, 760, 760);
+            shapes.getPaint().setARGB(255,255,255,255);
         } else if (shape == 1) {
             shapes = new ShapeDrawable(new RectShape());
             shapes.setBounds(10, 10, 760, 760);
+            shapes.getPaint().setARGB(255,255,255,255);
         }
     }
 

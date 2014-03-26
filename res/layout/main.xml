@@ -2,14 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent"
-        >
+              android:layout_height="match_parent">
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/prompt"
             />
-    <org.draw2D.GeometricView
+    <com.example.DrawingShape.GeometricView
             android:id="@+id/geomView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
