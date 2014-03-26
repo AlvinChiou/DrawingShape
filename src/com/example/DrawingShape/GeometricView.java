@@ -9,6 +9,8 @@ import android.view.View;
 
 public class GeometricView extends View{
     private ShapeDrawable shapes;
+    private int color;
+    private int shape;
     public GeometricView(Context context) {
         super(context);
         makeShapes();
@@ -17,6 +19,12 @@ public class GeometricView extends View{
     public GeometricView(Context context, AttributeSet attrs) {
         super(context, attrs);
         makeShapes();
+    }
+    public void setShape(int shape){
+        this.shape = shape;
+    }
+    public void setColor(int color){
+        this.color = color;
     }
     public void makeShapes(){
         shapes = new ShapeDrawable(new RectShape());

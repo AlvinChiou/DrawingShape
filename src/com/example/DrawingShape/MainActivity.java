@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
-
+    public GeometricView gv;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,33 +24,33 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        String msg = "";
+        //String msg = "";
         switch (item.getItemId()){
             case R.id.shape:
-                msg = getString(R.string.shape);
+                gv.setShape(0);
                 break;
             case R.id.circle:
-                msg = getString(R.string.circle);
+                gv.setShape(R.id.circle);
                 break;
             case R.id.rectangle:
-                msg = getString(R.string.rectangle);
+                gv.setShape(R.id.rectangle);
                 break;
 
             case R.id.color:
-                msg = getString(R.string.color);
+                gv.setColor(R.id.color);
                 break;
             case R.id.blue:
-                msg = getString(R.string.blue);
+                gv.setColor(R.id.blue);
                 break;
             case R.id.red:
-                msg = getString(R.string.red);
+                gv.setColor(R.id.red);
                 break;
             case R.id.exit:
                 this.finish();
             default:
                 return super.onOptionsItemSelected(item);
         }
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
         return true;
     }
 
